@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin – Foistlinge Vorbestellungen</title>
+  <link rel="stylesheet" href="/admin/admin.css" />
+</head>
+<body>
+  <div class="admin-wrap">
+    <header>
+      <h1>Hymnen für Trinker – Vorbestellungen</h1>
+      <a href="/api/admin/export" class="btn">Als Excel exportieren</a>
+    </header>
+
+    <section class="stats">
+      <div class="stat-card">
+        <p class="stat-value" id="stat-count">–</p>
+        <p class="stat-label">Verkaufte Platten</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-value" id="stat-revenue">–</p>
+        <p class="stat-label">Umsatz</p>
+      </div>
+    </section>
+
+    <section class="qr-section">
+      <details>
+        <summary>QR-Code für die Veranstaltung anzeigen</summary>
+        <img src="/qr.png" alt="QR-Code zur Vorbestellseite" class="qr-image" />
+        <p class="qr-hint">Zeigt automatisch auf diese Domain – einfach ausdrucken.</p>
+      </details>
+    </section>
+
+    <table id="orders-table">
+      <thead>
+        <tr>
+          <th>Datum</th>
+          <th>Name</th>
+          <th>E-Mail</th>
+          <th>Adresse</th>
+          <th>Betrag</th>
+        </tr>
+      </thead>
+      <tbody id="orders-body">
+        <tr><td colspan="5">Lade Bestellungen …</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="/admin/admin.js"></script>
+</body>
+</html>

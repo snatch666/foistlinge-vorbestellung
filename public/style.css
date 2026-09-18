@@ -1,0 +1,148 @@
+:root {
+  --bg: #0d0d0d;
+  --bg-card: #171717;
+  --red: #d1272d;
+  --text: #f2f2f2;
+  --muted: #a3a3a3;
+  --border: #2b2b2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 0 48px;
+}
+
+.artwork {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-bottom: 4px solid var(--red);
+}
+
+.content {
+  padding: 24px 20px 0;
+}
+
+.band {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--red);
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 16px;
+  line-height: 1.1;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+
+.price-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.price {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.price-sub {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+#paypal-button-container {
+  margin-top: 16px;
+  min-height: 55px;
+}
+
+.status {
+  text-align: center;
+  padding: 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 16px;
+  display: none;
+}
+
+.status.show {
+  display: block;
+}
+
+.status.success {
+  background: #16351d;
+  color: #7fe89a;
+  border: 1px solid #2c6b3f;
+}
+
+.status.error {
+  background: #3a1414;
+  color: #ff9d9d;
+  border: 1px solid #6b2c2c;
+}
+
+.status.pending {
+  background: #1e1e1e;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.tracklist {
+  margin-top: 28px;
+}
+
+.tracklist h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.tracklist ol {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.footer-note {
+  margin-top: 32px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.6;
+}

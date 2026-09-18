@@ -1,0 +1,20 @@
+{
+  "name": "foistlinge-vorbestellung",
+  "version": "1.0.0",
+  "description": "Vorbestell-Landingpage mit PayPal-Checkout und Admin-CRM für Foistlinge - Hymnen für Trinker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.19.2",
+    "pg": "^8.13.1",
+    "qrcode": "^1.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
