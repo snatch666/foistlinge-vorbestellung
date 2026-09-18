@@ -24,6 +24,8 @@ const ALBUM = {
   description: "Foistlinge – Hymnen für Trinker (Vinyl-Vorbestellung, inkl. digitalem Album & Versand)",
 };
 
+app.get("/health", (req, res) => res.type("text/plain").send("ok"));
+
 // --- Oeffentliche Landingpage & Assets ---
 app.use(express.static(path.join(__dirname, "public")));
 
