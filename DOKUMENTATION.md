@@ -53,31 +53,31 @@ Datenspeicherung.
 
 ```
 Foistlinge VVK/
-├── server.js              Express-Server, alle Routen
-├── lib/
-│   ├── paypal.js           PayPal-API-Anbindung (Order erstellen/erfassen)
-│   ├── orders.js            Datenspeicherung (Postgres, mit Datei-Fallback)
-│   └── auth.js               Basic-Auth-Schutz für /admin
-├── public/                 Landingpage (öffentlich)
-│   ├── index.html
-│   ├── style.css
-│   └── app.js                Lädt PayPal-SDK, steuert Bezahlvorgang
-├── public-admin/           Admin-Oberfläche (nur mit Login erreichbar)
-│   ├── index.html
-│   ├── admin.css
-│   └── admin.js
-├── data/orders.json        Nur Fallback-Speicher, falls keine DATABASE_URL gesetzt ist
-├── .env                    Zugangsdaten & Konfiguration (NICHT im Git-Repo)
-├── .env.example             Vorlage für .env
-└── package.json
+- server.js                Express-Server, alle Routen
+- lib/
+  - paypal.js               PayPal-API-Anbindung (Order erstellen/erfassen)
+  - orders.js                Datenspeicherung (Postgres, mit Datei-Fallback)
+  - auth.js                  Basic-Auth-Schutz für /admin
+- public/                  Landingpage (öffentlich)
+  - index.html
+  - style.css
+  - app.js                   Lädt PayPal-SDK, steuert Bezahlvorgang
+- public-admin/            Admin-Oberfläche (nur mit Login erreichbar)
+  - index.html
+  - admin.css
+  - admin.js
+- data/orders.json         Nur Fallback-Speicher, falls keine DATABASE_URL gesetzt ist
+- .env                     Zugangsdaten & Konfiguration (NICHT im Git-Repo)
+- .env.example              Vorlage für .env
+- package.json
 ```
 
 ### Datenfluss einer Bestellung
 
-1. Besucher klickt PayPal-Button → Server erstellt eine PayPal-Order
+1. Besucher klickt PayPal-Button -> Server erstellt eine PayPal-Order
    (`POST /api/paypal/create-order`).
 2. Besucher bezahlt bei PayPal, gibt Versandadresse ein.
-3. Frontend ruft `POST /api/paypal/capture-order/:orderID` auf → Server
+3. Frontend ruft `POST /api/paypal/capture-order/:orderID` auf -> Server
    bestätigt die Zahlung bei PayPal, liest Name/E-Mail/Adresse aus der
    PayPal-Antwort aus und speichert die Bestellung in der Datenbank.
 4. Admin-Bereich liest die Datenbank aus und zeigt/exportiert die Daten.
@@ -202,6 +202,6 @@ npm install
 npm start
 ```
 
-Voraussetzung: Node.js ≥ 18 und eine ausgefüllte `.env`-Datei (siehe
+Voraussetzung: Node.js Version 18 oder neuer und eine ausgefüllte `.env`-Datei (siehe
 `.env.example`). Details zur Ersteinrichtung (PayPal-App, Neon-Datenbank,
 GitHub, Render) stehen in der [README.md](README.md).

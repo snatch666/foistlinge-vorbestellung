@@ -31,10 +31,10 @@ npm start
 ## 2. PayPal-App einrichten
 
 1. Auf https://developer.paypal.com einloggen (dein normaler PayPal-Business-Account reicht).
-2. "Apps & Credentials" → "Create App" → Namen vergeben (z. B. "Foistlinge Vorbestellung").
+2. "Apps & Credentials" -> "Create App" -> Namen vergeben (z. B. "Foistlinge Vorbestellung").
 3. Zuerst im Modus **Sandbox** testen: Client ID und Secret aus der Sandbox-App in
    `.env` eintragen (`PAYPAL_CLIENT_ID`, `PAYPAL_CLIENT_SECRET`), `PAYPAL_ENV=sandbox`.
-4. Mit einem PayPal-Sandbox-Testkäufer-Account (unter "Sandbox" → "Accounts" im
+4. Mit einem PayPal-Sandbox-Testkäufer-Account (unter "Sandbox" -> "Accounts" im
    Dashboard) einmal durchbestellen und prüfen, ob die Bestellung im
    Admin-Bereich auftaucht.
 5. Wenn alles passt: im Dashboard oben rechts auf **Live** umschalten, dort die
@@ -51,7 +51,7 @@ Seite live geht.
 ## 4. Datenbank einrichten (Neon, kostenlos & dauerhaft)
 
 1. Auf https://neon.tech mit GitHub- oder E-Mail-Account registrieren.
-2. "Create Project" → Namen vergeben (z. B. "foistlinge-vorbestellung") → Region
+2. "Create Project" -> Namen vergeben (z. B. "foistlinge-vorbestellung") -> Region
    z. B. Frankfurt (eu-central-1) auswählen.
 3. Im Dashboard unter "Connection Details" die **Connection String** kopieren
    (sieht aus wie `postgresql://user:pass@ep-xxxx.eu-central-1.aws.neon.tech/neondb?sslmode=require`).
@@ -82,7 +82,7 @@ Zugangsdaten bleiben also lokal.
 ## 6. Online stellen mit Render (damit der QR-Code am Veranstaltungstag funktioniert)
 
 1. Auf https://render.com registrieren (Login z. B. direkt mit GitHub).
-2. "New" → "Web Service" → das eben erstellte GitHub-Repo auswählen.
+2. "New" -> "Web Service" -> das eben erstellte GitHub-Repo auswählen.
 3. Build Command: `npm install`, Start Command: `npm start`.
 4. Unter "Environment" alle Variablen eintragen (wie in `.env`):
    `PAYPAL_CLIENT_ID`, `PAYPAL_CLIENT_SECRET`, `PAYPAL_ENV`, `DATABASE_URL`,
