@@ -1,8 +1,16 @@
 # Foistlinge – Vorbestell-Tool
 
-Landingpage zum Vorbestellen von "Hymnen für Trinker" (Vinyl, 18 €) mit
-direkter PayPal-Zahlung, automatischer Adressabfrage durch PayPal und
-einem passwortgeschützten Admin-Bereich mit Verkaufszähler + Excel-Export.
+Landingpage zum Vorbestellen von "Hymnen für Trinker" (Vinyl, 24 € inkl.
+Versand) mit direkter PayPal-Zahlung, automatischer Adressabfrage durch
+PayPal und einem passwortgeschützten Admin-Bereich mit Verkaufszähler +
+Excel-Export.
+
+**Die Seite ist bereits live:** https://foistlinge-vorbestellung.onrender.com
+
+Für die vollständige Dokumentation (Architektur, Admin-Anleitung,
+Live-Zugangsdaten-Übersicht, bekannte Einschränkungen, Datenschutz-Status,
+Wartung) siehe **[DOKUMENTATION.md](DOKUMENTATION.md)**. Diese README
+beschreibt nur die Ersteinrichtung von Grund auf.
 
 ## 1. Lokal starten
 
